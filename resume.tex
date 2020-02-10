@@ -1,0 +1,240 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\documentclass[10pt]{report}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\fontspec{[fontawesome-webfont.ttf]}
+\usepackage{fontawesome}
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Aryaman Jain}{
+Sophomore @ Computer Science and Enginnering, IIT Kharagpur}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Indian Institute of \\ Technology Kharagpur}
+\descript{Dual Degree in Computer \\ Science and Engineering \\ CGPA: 9.17/10}
+\location{2018-2023 | West Bengal, India}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{INTEREST AREAS}
+I love to learn new things and it is one of the reasons to choose Computer Science as it never fails to surprise us with new things.
+
+I started doing machine learning after trying different areas of software engineering and instantly fell in love with it.
+I am mainly interested in applications of machine learning and deep learning in real life.
+
+Other than machine learning I also know web development.
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CONTACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CONTACT} 
+\descript{LLR Hall, \\ IIT Kharagpur,\\ West Bengal - 721302 \\ Phone: +91-8223801399}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{LINKS} 
+\faEnvelope\ {\href{mailto:mukul.csiitkgp@gmail.com}{ jainaryaman123@gmail.com}}\\
+\faGithub\ {\href{https://github.com/Aryamn}{Aryamn}}\\
+\faLinkedinSquare\ {\href{https://www.linkedin.com/in/aryaman-jain-77784817a/}{aryaman-jain}}\\
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\emph{T - Theory | L - Laboratory}\\
+\descript{Completed}
+Programming \& Data Structures (T/L)\\
+Discrete Structures (T)\\
+Algorithms-1 (T/L) \\
+\descript{Ongoing}
+Software Engineering (T/L) \\
+Formal Language \& Automata Theory (T) \\
+Switching Circuits \& Logic Design (T/L) \\ 
+Probablity and Statistics (T)\\
+\descript{Online Courses}
+% href{https://www.coursera.org/learn/machine-learning}{Machine Learning - Andrew Ng}\\
+\href{https://www.coursera.org/specializations/deep-learning}{Deep Learning - Andrew Ng}\\
+% \href{https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning}{DL - Improving Deep Neural Networks}\\
+ \href{https://www.coursera.org/learn/convolutional-neural-networks?action=enroll&authMode=signup&specialization=deep-learning}{Convolutional Neural Networks}\\
+\href{https://www.coursera.org/learn/convolutional-neural-networks?action=enroll&authMode=signup&specialization=deep-learning}{Deep Neural Networks with PyTorch}\\
+
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{PROJECTS}
+
+\runsubsection{Blog Web App}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Made a Web App with flask based back-end and HTML,CSS,JavaScript based front-end. Used SQLAlchemy for storing database.
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{{Image Classifier}}
+\descript{Convolutional Neural Net}
+
+
+\begin{tightemize}
+\item Made a image classifier on CIFAR10 using deep learning.  
+\item Used Convolutional Neural Net architecture with the help of PyTorch library .
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Path Planning}
+\descript{AGV Task Round}
+\begin{tightemize}
+\item Optimized multiple data structures and path finding algorithm(Dijkstra) to find a solution for a given maze, with multiple constraints towards emulating a real car. Implemented in p5.js.
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{General Championship Data Analytics}
+\descript{Inter-hall}
+\begin{tightemize}
+\item Implemented ARIMA Model on the given time series data to predict future results.
+\item Gave important inferences about the data.
+
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills}
+\begin{tabular}{r|p{15cm}}
+\textsc{Programming Languages} & \textbf{ C | C++ | Python | JavaScript | GNU Octave (Familiar)} \\
+\textsc{Libraries / Frameworks} & \textbf{Pytorch | Pandas | Flask | OpenCV | Numpy | sklearn |  |  }\\
+\textsc{Databases} & \textbf{SQLAlchemy}\\
+\textsc{Systems / Platforms} & \textbf{Git | Linux}\\ 
+\textsc{Web Technolgies} & \textbf{HTML+CSS	| BeautifulSoup} \\
+\end{tabular}
+%----------------------------------------------------------------------------------------
+%	Scholastic Achievements
+%----------------------------------------------------------------------------------------
+
+\section{ACHIEVEMENTS}
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+
+\item{Codechef :} 4 star rating competitive coder on Codechef platform.
+\item{Facebook Hacker Cup:} Participated and cracked first round in Facebook Hacker Cup 2019.
+\item{Google Code Jam :} Participated and cracked first round in Google Code Jam 2019.
+\item{JEE Advanced \emph{AIR 376}:} Under top 0.16\% amongst more than 2,00,000 students \\
+\item {JEE Main \emph{AIR 20001}:} In top 0.15\% amongst more than 12,00,000 students. \\
+\end{tightemize}
+\sectionsep
+
+%	Activities and Leadership
+%----------------------------------------------------------------------------------------
+
+\section{Activities \& Leadership}
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+
+
+\item {\emph{Core Team Member, ProDex}:} Society of people having enthusiasm towards Product Designing.\\
+\item{\emph{Product Designing Involvement:}} Part of Product Design team of my hall.
+\item{\emph{Data Analytics:}} Part of Data Analytics team of my hall.
+\item{\emph{Mentor:}} Mentored a team of 4 students regarding Product Design competition.
+\item{\emph{Secretary:}} Managed several hall events related to technology in my hall.
+
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}\
